@@ -1,0 +1,41 @@
+<?xml version="1.0" encoding="utf-8"?>
+
+<!-- This file is referred to by MainActivity.java inside onCreate() -->
+
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="horizontal" >
+    <!--  layout_width="match_parent" specifies that the width matches the parent layout, which is linear... the whole screen -->
+    <!--  orientation="horizontal" specifies the horizontal linear arrangement of the activity -->
+    <!--  ____________________________________________________________________________________________________________ -->
+    
+    <!--  EditText specifies a text box where information can be entered through keyboard -->
+    
+    <EditText android:id="@+id/edit_message"
+        android:layout_width="0dp"
+        android:layout_weight="1"
+        android:layout_height="wrap_content"
+        android:hint="@string/edit_message" />
+    <!--  android:layout_weight value is a number that specifies the amount of remaining space each view
+    	  should consume, relative to the amount consumed by sibling views. if the weight is set in a horizontal layout view 
+    	  the android:layout_width should be set to "0dp" to avoid wasted calculation - it won't matter because weight is set. -->
+    	  
+    <!--  android:hint displays a default string to display when the text field is empty.
+     	  Instead of using a hard-coded string as the value, the "@string/edit_message" 
+          value refers to a string resource defined in a separate file. Because this refers to
+          a concrete resource (not just an identifier), it does not need the plus sign. -->
+    <!--  ____________________________________________________________________________________________________________ -->
+     
+    <!--  Button specifies a clickable UI object -->
+    
+    <Button
+     android:layout_width="wrap_content"
+     android:layout_height="wrap_content"
+     android:text="@string/button_send"
+     android:onClick="sendMessage"  />
+    <!-- layout_width="wrap_content" specifies that the button is only as big as necessary to fit the button's text. -->
+    <!--  This button doesn't need the android:id attribute, because it won't be referenced from the activity code. -->
+    <!--  android:onClick="sendMessage" indicates on click of this button, sendMessage() is called in the MainActivity.java file -->
+</LinearLayout>
