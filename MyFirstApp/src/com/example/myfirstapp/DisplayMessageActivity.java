@@ -37,7 +37,7 @@ public class DisplayMessageActivity extends Activity {
 	    
 	    getActionBar().setDisplayHomeAsUpEnabled(true); //Sets the actionbar
 	    Log.i("MY_MESSAGE", "onCreate (DisplayMessageActivity)");
-	    Log.i("Git test","Git test");
+	    Log.i("Git testbranch","Git test branch");
 	}
 
 	@Override
